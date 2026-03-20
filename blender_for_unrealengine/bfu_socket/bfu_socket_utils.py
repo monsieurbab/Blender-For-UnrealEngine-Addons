@@ -96,6 +96,7 @@ def get_skeletal_mesh_socket_data(obj: bpy.types.Object) -> List[Dict[str, Any]]
             RelativeMatrix = mathutils.Matrix.Rotation(math.radians(90), 4, 'X') @ RelativeMatrix
         elif object_export_procedure.value == BFU_SkeletonExportProcedure.STANDARD_FBX.value:
             RelativeMatrix = (bml.inverted() @ am.inverted() @ em)
+            RelativeMatrix = mathutils.Matrix.Rotation(math.radians(90), 4, 'X') @ RelativeMatrix
         elif object_export_procedure.value == BFU_SkeletonExportProcedure.CUSTOM_FBX_EXPORT.value:
             RelativeMatrix = (bml.inverted() @ am.inverted() @ em)
             RelativeMatrix = mathutils.Matrix.Rotation(math.radians(90), 4, 'Y') @ RelativeMatrix
