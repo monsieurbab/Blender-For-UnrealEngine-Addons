@@ -115,7 +115,7 @@ def get_skeletal_mesh_socket_data(obj: bpy.types.Object) -> List[Dict[str, Any]]
             array_rotation: List[float] = [math.degrees(r[0]), math.degrees(r[1])*-1, math.degrees(r[2])*-1]
             array_scale: List[float] = [s[0], s[1], s[2]]
         elif object_export_procedure.value == BFU_SkeletonExportProcedure.STANDARD_FBX.value:
-            array_location: List[float] = [t[0], t[1]*-1, t[2]]
+            array_location: List[float] = [t[0]*100, t[1]*-100, t[2]*100]
             array_rotation: List[float] = [math.degrees(r[0]), math.degrees(r[1])*-1, math.degrees(r[2])*-1]
             array_scale: List[float] = [s[0], s[1], s[2]]
         elif object_export_procedure.value == BFU_SkeletonExportProcedure.CUSTOM_FBX_EXPORT.value:
