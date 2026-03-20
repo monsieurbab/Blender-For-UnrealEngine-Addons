@@ -81,7 +81,7 @@ def get_skeleton_procedure_preset(procedure: BFU_SkeletonExportProcedure) -> Dic
         preset["use_space_transform"] = True
         preset["axis_forward"] = '-Z'
         preset["axis_up"] = 'Y'
-        preset["primary_bone_axis"] = 'Y'
+        preset["primary_bone_axis"] = 'Z'
         preset["secondary_bone_axis"] = 'X'
     return preset
 
