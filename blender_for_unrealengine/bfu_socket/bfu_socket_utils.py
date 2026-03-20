@@ -245,7 +245,7 @@ def convert_to_unrealengine_socket(
                             obj.name = bfu_unreal_utils.generate_name_for_unreal_engine(obj.name, obj.name)
                         else:
                             # Set a new name using the owner name as reference
-                            obj.name = bfu_unreal_utils.generate_name_for_unreal_engine("SOCKET_"+socket_owner.name, obj.name)
+                            obj.name = bfu_unreal_utils.generate_name_for_unreal_engine("SOCKET_"+obj.name, obj.name)
                         bpy.ops.object.parent_set(type='OBJECT',keep_transform=True)
                         converted_objs.append(obj)
 
@@ -257,7 +257,7 @@ def convert_to_unrealengine_socket(
                             obj.name = bfu_unreal_utils.generate_name_for_unreal_engine(obj.name, obj.name)
                         else:
                             # Set a new name using the owner name as reference
-                            obj.name = bfu_unreal_utils.generate_name_for_unreal_engine("SOCKET_"+socket_owner.name, obj.name)
+                            obj.name = bfu_unreal_utils.generate_name_for_unreal_engine("SOCKET_"+obj.name, obj.name)
                         bpy.ops.object.parent_set(type='BONE',keep_transform=True)
                         converted_objs.append(obj)
 
