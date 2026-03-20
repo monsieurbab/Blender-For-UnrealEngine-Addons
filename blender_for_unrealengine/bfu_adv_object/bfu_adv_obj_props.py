@@ -184,7 +184,7 @@ def register():
             ('-Y', "-Y", ""),
             ('-Z', "-Z", ""),
             ],
-        default='Y',
+        default='Z',
         )
 
     bpy.types.Object.bfu_fbx_export_secondary_bone_axis = bpy.props.EnumProperty(  # type: ignore[attr-defined]
